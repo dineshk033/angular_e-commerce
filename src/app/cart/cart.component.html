@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-lg-6 col-md-8 mx-auto">
+    <h4 class="text-center">My Cart</h4>
+    <ul class="list-group">
+      <div class="list-group-item">
+        <div class=" mb-3">
+          <div class="row no-gutters">
+            <div class="col-md-8">
+              <p class="text-info">
+                <strong>{{ list.Name }}</strong>
+                <small>{{ list.Color }},{{ list.Brand }}</small>
+              </p>
+              <p>Seller: Cloud</p>
+              <span class="text-success"
+                ><strong>Rs.{{ list.Price * list.qty }} </strong></span
+              >
+              <span> Qty:{{ list.qty }}</span>
+              <div>
+                <button type="button" class="btn btn-danger  btnStyle">
+                  Delete
+                </button>
+                <button type="button" class="btn btn-warning btnStyle">
+                  Save For Later
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <img src="..." class="card-img" alt="..." />
+            </div>
+          </div>
+        </div>
+      </div>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="text-center card " appHighlightItem>
+  <img
+    [src]="items.Avatar"
+    height="130px"
+    width="40%"
+    class="mx-auto d-block"
+    alt="..."
+  />
+  <div class="card-body">
+    <a
+      class="card-title text-decoration-none"
+      [routerLink]="['/productDetail', items.id]"
+    >
+      <strong>{{ items.Name | titlecase }}</strong>
+    </a>
+    <div class="card-text">
+      <b> {{ items.Price | currency: "IND":"Rs." }}</b>
+    </div>
+    <div class="card-text text-success">
+      <b>{{ items.Brand }} | {{ items.Color | uppercase }}</b>
+    </div>
+    <div class="card-text text-primary">
+      <!-- <input type="checkbox" name={items.id} checked={props.checked} value={items.id} onClick={props.changeHandle}/>Add to compare</p> -->
+      <div class="card-text">
+        <small class="text-muted">Seller By {{ items.Seller }}</small>
+      </div>
+    </div>
+  </div>
+  <button class="card-footer btn bg-warning btn-lg btn-block">
+    Add to cart
+  </button>
+</div>

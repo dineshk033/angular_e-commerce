@@ -1,0 +1,89 @@
+<form [formGroup]="myGroup" (ngSubmit)="handleSubmit()">
+  <h3>Registration</h3>
+  <div class="form-group ">
+    <label for="emailId">Email</label>
+    <input
+      type="email"
+      class="form-control"
+      id="emailId"
+      formControlName="emailId"
+      placeholder="Email"
+    />
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="password">Password</label>
+      <input
+        type="email"
+        class="form-control"
+        id="password"
+        formControlName="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Confirm Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="inputPassword4"
+        formControlName="cpassword"
+        placeholder="confirm Password"
+      />
+    </div>
+  </div>
+  <div *ngIf="myGroup.errors?.CMatch" class="alert alert-danger">
+    password and confirm password doesn't match
+  </div>
+  <div formGroupName="address">
+    <div class="form-group">
+      <label for="inputAddress">Address</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputAddress"
+        formControlName="addressline1"
+        placeholder="1234 Main St"
+      />
+    </div>
+    <div class="form-group">
+      <label for="inputAddress2">Address 2</label>
+      <input
+        type="text"
+        class="form-control"
+        id="inputAddress2"
+        formControlName="addressline2"
+        placeholder="Apartment, studio, or floor"
+      />
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">City</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputCity"
+          formControlName="city"
+        />
+      </div>
+      <div class="form-group col-md-4">
+        <label for="inputState">State</label>
+        <select id="inputState" class="form-control" formControlName="state">
+          <option selected>Choose...</option>
+          <option value="TN">Tamil Nadu</option>
+          <option value="KL">kerala</option>
+        </select>
+      </div>
+      <div class="form-group col-md-2">
+        <label for="inputZip">Zip</label>
+        <input
+          type="text"
+          class="form-control"
+          id="inputZip"
+          formControlName="pincode"
+        />
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Sign in</button>
+</form>

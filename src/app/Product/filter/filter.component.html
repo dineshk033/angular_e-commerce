@@ -1,0 +1,35 @@
+<form class="card p-3" autocomplete="off">
+  <div class="form-group">
+    <input
+      type="text"
+      class="form-control"
+      name="search"
+      placeholder="search"
+      ngModel
+      #search="ngModel"
+      (keyup)="handleSearch(search.value)"
+    />
+  </div>
+  <label>Sort By</label>
+  <div class="custom-control custom-radio">
+    <input
+      type="radio"
+      id="price"
+      name="sort"
+      value="price"
+      class="custom-control-input"
+    />
+    <label class="custom-control-label" for="price">Price</label>
+  </div>
+  <div class="custom-control custom-radio">
+    <input
+      type="radio"
+      id="recent"
+      name="sort"
+      value="recent"
+      class="custom-control-input"
+    />
+    <label class="custom-control-label" for="recent">Recent</label>
+  </div>
+  <button class="btn btn-primary mt-3">Reset All</button>
+</form>
